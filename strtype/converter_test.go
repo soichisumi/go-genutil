@@ -3,7 +3,7 @@ package strtype_test
 import (
 	"testing"
 
-	"github.com/hori-ryota/go-genutil/strtype"
+	"github.com/soichisumi/go-genutil/strtype"
 	"github.com/stretchr/testify/assert"
 )
 

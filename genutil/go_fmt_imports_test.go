@@ -3,7 +3,7 @@ package genutil_test
 import (
 	"testing"
 
-	"github.com/GuiltyMorishita/go-genutil/genutil"
+	"github.com/soichisumi/go-genutil/genutil"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -50,35 +50,35 @@ afmt "fmt"
 				"fmt":        "fmt",
 				"bytes":      "bytes",
 				"json":       "encoding/json",
-				"go-genutil": "github.com/hori-ryota/go-genutil",
+				"go-genutil": "github.com/soichisumi/go-genutil",
 			},
 			want: `import (
 "bytes"
 "encoding/json"
 "fmt"
 
-"github.com/hori-ryota/go-genutil"
+"github.com/soichisumi/go-genutil"
 )`,
 		},
 		{
 			name: "with aliased non-standard package",
 			src: map[string]string{
 				"fmt":     "fmt",
-				"genutil": "github.com/hori-ryota/go-genutil",
+				"genutil": "github.com/soichisumi/go-genutil",
 			},
 			want: `import (
 "fmt"
 
-genutil "github.com/hori-ryota/go-genutil"
+genutil "github.com/soichisumi/go-genutil"
 )`,
 		},
 		{
 			name: "only non-standard package",
 			src: map[string]string{
-				"go-genutil": "github.com/hori-ryota/go-genutil",
+				"go-genutil": "github.com/soichisumi/go-genutil",
 			},
 			want: `import (
-"github.com/hori-ryota/go-genutil"
+"github.com/soichisumi/go-genutil"
 )`,
 		},
 	} {
